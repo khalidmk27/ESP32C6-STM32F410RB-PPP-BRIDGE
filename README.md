@@ -63,6 +63,8 @@ The diagram describes the configured topology and the tested system arrangement;
 │   │   ├── idf_component.yml
 │   │   └── main.c
 │   └── .devcontainer/
+├── Images/
+│   └── hardware_setup_PPP_image.png
 └── stm32-f410-ppp-client/
     ├── Cargo.toml
     ├── Cargo.lock
