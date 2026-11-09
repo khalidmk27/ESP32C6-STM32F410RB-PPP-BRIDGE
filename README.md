@@ -243,6 +243,37 @@ The configured runner and flashing workflow have been used for the successful ha
 
 Ensure the harware is connected before building and opening the contianer.
 
+**Output Example:**
+
+```sh
+     Erasing ✔ 100% [####################] 128.00 KiB @  32.09 KiB/s (took 4s)                                                                                            Programming ✔ 100% [####################]  86.00 KiB @   3.05 KiB/s (took 28s)                                                                                              Finished in 32.33s
+[INFO ] STM32F410RB PPP client starting (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:269)
+[INFO ] IPv4: DOWN (embassy_net embassy-net-0.9.1/src/lib.rs:788)
+[INFO ] PPP client started; waiting for IPv4 configuration (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:303)
+[INFO ] PPP link phase Establish -> Network (ppproto src/ppp/mod.rs:158)
+[INFO ] PPP link phase Network -> Open (ppproto src/ppp/mod.rs:158)
+[INFO ] PPP IPv4 configured (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:78)
+[INFO ] link_up = true (embassy_net embassy-net-0.9.1/src/lib.rs:889)
+[INFO ] PPP IP configuration is up (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:305)
+[INFO ] Resolving MQTT broker (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:178)
+[INFO ] Resolving example.com (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:96)
+[INFO ] Connecting to MQTT broker (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:201)
+[INFO ] DNS resolved; opening TCP port 80 (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:114)
+[INFO ] TCP connected; sending clear-text HTTP diagnostic request (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:130)
+[INFO ] HTTP diagnostic response bytes: 96 (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:147)
+[INFO ] HTTP smoke test complete; repeating in 30 seconds (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:152)
+[INFO ] Connected with a fresh broker session (minimq mqtt_client/session/handshake.rs:230)
+[INFO ] Connected to MQTT broker; publishing test message (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:224)
+[INFO ] MQTT QoS 1 publish acknowledged by broker (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:255)
+[INFO ] Graceful disconnect requested (minimq mqtt_client/session/operations.rs:25)
+[INFO ] MQTT smoke test complete; repeating in 30 seconds (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:262)
+[INFO ] Resolving example.com (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:96)
+[INFO ] DNS resolved; opening TCP port 80 (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:114)
+[INFO ] TCP connected; sending clear-text HTTP diagnostic request (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:130)
+[INFO ] HTTP diagnostic response bytes: 96 (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:147)
+[INFO ] HTTP smoke test complete; repeating in 30 seconds (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:152)
+```
+
 ## Hardware validation and test status
 
 The project maintainer confirms that both firmware applications were built, flashed, and successfully exercised together on physical hardware. The status below records that validation while separately identifying the test artifacts that are not yet published in the repository.
