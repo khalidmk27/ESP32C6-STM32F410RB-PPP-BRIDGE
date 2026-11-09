@@ -307,8 +307,6 @@ Both firmware applications were built, flashed, and successfully exercised toget
 ## Limitations and known gaps
 
 - The repository does not yet include a formal hardware validation report, complete runtime logs, packet captures, or a repeatable test procedure.
-- A dedicated wiring diagram, schematic, board photographs, physical connector mapping, and detailed electrical-interface notes are not included.
-- The source configures IPv4 using the negotiated local address with prefix length `0` and `gateway: None`. The repository does not document the design rationale for these values.
 - The STM32 PPP runner error path logs the failure and waits; it does not automatically restart the PPP runner.
 - The HTTP diagnostic reads up to 96 response bytes but does not parse or validate the HTTP status or body.
 - MQTT uses plaintext TCP port 1883. The checked-in client does not configure TLS or MQTT username/password authentication.
@@ -317,7 +315,6 @@ Both firmware applications were built, flashed, and successfully exercised toget
 - The `NETWORK_SEED` constant is deterministic and is explicitly not a cryptographic entropy source.
 - No throughput, latency, power-consumption, memory-utilization, or long-duration stability measurements are included.
 - No dedicated network interruption, PPP renegotiation, or recovery test report is included.
-- The exact Rust compiler version and installed versions of `flip-link` and `probe-rs-tools` are not pinned in the STM32 container configuration.
 - Wi-Fi SSID and password are placeholders in the checked-in ESP32 source and must be configured locally.
 
 ## Possible next steps
