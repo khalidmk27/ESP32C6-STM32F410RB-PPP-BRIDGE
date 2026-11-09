@@ -89,7 +89,7 @@ The two firmware targets are ESP32-C6 and STM32F410RB. Both sides configure the 
 | STM32 UART TX buffer | 512 bytes, statically allocated | [`main.rs`](stm32-f410-ppp-client/src/main.rs) |
 | STM32 UART RX buffer | 512 bytes, statically allocated | [`main.rs`](stm32-f410-ppp-client/src/main.rs) |
 
-The source assigns the STM32 USART1 peripheral pins but does not document the physical wire-to-wire mapping, board connector locations, voltage levels, or flow-control wiring. Consult the board documentation when reproducing the physical connection; do not assume that source pin names alone describe connector placement or electrical compatibility.
+The source assigns the STM32 USART1 peripheral pins but does not document the physical wire-to-wire mapping, board connector locations, voltage levels, or flow-control wiring. Consult the board documentation when reproducing the physical connection.
 
 The ESP32 Wi-Fi SSID and password are currently placeholders (`YOUR_WIFI_SSID` and `YOUR_WIFI_PASSWORD`) in the checked-in source. Replace them with local credentials before building for a network test, and do not commit personal Wi-Fi credentials.
 
