@@ -75,7 +75,8 @@ The source/configuration identifies the MCU targets as ESP32-C6 and STM32F410RB.
 | ESP32 UART RX GPIO | 20 | `ESP32C6_EPPP_LINK_UART/main/main.c` |
 | UART baud rate | 115200 | Both firmware entry points |
 | STM32 UART peripheral | USART1 | `stm32-f410-ppp-client/src/main.rs` |
-| STM32 UART pins passed to `BufferedUart::new` | PA10, PA9 | `stm32-f410-ppp-client/src/main.rs` |
+| STM32 USART1 RX | PA10 | `stm32-f410-ppp-client/src/main.rs` |
+| STM32 USART1 TX | PA9 | `stm32-f410-ppp-client/src/main.rs` |
 | STM32 UART buffers | 512-byte TX and RX static buffers | `stm32-f410-ppp-client/src/main.rs` |
 
 The source gives the STM32 USART pin arguments but does not state the physical wire-to-wire mapping, board connector locations, voltage levels, or flow-control wiring. Confirm those against the specific boards and their hardware documentation before connecting them.
