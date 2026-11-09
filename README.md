@@ -259,7 +259,7 @@ Ensure the harware is connected before building and opening the contianer.
      Erasing ✔ 100% [####################] 128.00 KiB @  32.09 KiB/s (took 4s)                                                                                            Programming ✔ 100% [####################]  86.00 KiB @   3.05 KiB/s (took 28s)                                                                                              Finished in 32.33s
 [INFO ] STM32F410RB PPP client starting (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:269)
 [INFO ] IPv4: DOWN (embassy_net embassy-net-0.9.1/src/lib.rs:788)
-[INFO ] PPP client started; waiting for IPv4 configuration (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:303)
+[INFO ] PPP client started; waiting for IPv4 configuration (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:281)
 [INFO ] PPP link phase Establish -> Network (ppproto src/ppp/mod.rs:158)
 [INFO ] PPP link phase Network -> Open (ppproto src/ppp/mod.rs:158)
 [INFO ] PPP IPv4 configured (stm32_f410_ppp_client stm32-f410-ppp-client/src/main.rs:78)
