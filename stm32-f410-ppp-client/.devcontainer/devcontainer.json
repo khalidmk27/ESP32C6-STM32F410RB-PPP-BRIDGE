@@ -1,0 +1,20 @@
+
+{
+    "name": "Existing Dockerfile",
+    "build": {
+        "context": "..",
+        "dockerfile": "../Dockerfile"
+    },
+
+    "privileged": true,
+
+    "runArgs": [
+        "--group-add=46"
+    ],
+
+    "mounts": [
+        "source=/dev/bus/usb,target=/dev/bus/usb,type=bind"
+    ],
+
+    "remoteUser": "vscode"
+}

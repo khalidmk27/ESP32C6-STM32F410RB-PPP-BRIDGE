@@ -1,0 +1,33 @@
+[package]
+name = "stm32-f410-ppp-client"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+cortex-m = { version = "0.7", features = [
+    "critical-section-single-core"
+] }
+cortex-m-rt = "0.7.5"
+defmt = "1"
+defmt-rtt = "1"
+panic-probe = { version = "1", features = ["print-defmt"] }
+static_cell = "2"
+heapless = "0.9"
+embedded-io-async = "0.7"
+
+embassy-executor = { version = "0.9.1", features = ["arch-cortex-m", "executor-thread", "defmt"] }
+embassy-time = { version = "0.5.0", features = ["defmt"] }
+embassy-stm32 = { version = "=0.5.0", features = ["stm32f410rb", "time", "time-driver-tim5", "defmt"] }
+embassy-net = { version = "=0.9.1", default-features = false, features = ["medium-ip", "proto-ipv4", "tcp", "dns", "defmt"] }
+embassy-net-ppp = { version = "=0.3.0", features = ["defmt"] }
+
+minimq = "0.13.5"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+debug = 2
+panic = "abort"
+overflow-checks = true
