@@ -6,8 +6,7 @@ The ESP32-C6 runs an ESP-IDF application that starts an EPPP PPP server over UAR
 
 The project demonstrates how a small microcontroller can use a second MCU as a Wi-Fi gateway through a serial PPP link, combining ESP-IDF, Embassy, asynchronous embedded Rust, UART transport, IPv4 networking, DNS, TCP, HTTP, and MQTT.
 
-> **Hardware validation:** Both firmware applications have been successfully built in their respective Docker development environments, flashed to their physical development boards, and exercised together on hardware. The repository does not yet include a formal test report or a complete set of runtime logs, photographs, packet captures, or performance measurements. The absence of those artifacts in GitHub should not be interpreted as the absence of hardware testing.
-
+> **Hardware validation:** Both firmware applications have been successfully built in their respective Docker development environments, flashed to their physical development boards, and exercised together on hardware. The repository does not yet include a formal test report or a complete set of runtime logs, photographs, packet captures, or performance measurements.
 ## Project status
 
 The table distinguishes implementation in the repository from the hardware validation reported by the project maintainer.
