@@ -96,7 +96,7 @@ The ESP32 Wi-Fi SSID and password are currently placeholders (`YOUR_WIFI_SSID` a
 
 **Development Boards**
 
-- [STMicroelectronics NUCLEO-F410RB]([https://robu.in/product/stmicroelectronics-development-board-stm32f410rb-nucleo-64-mcu-st-link-v2-1-debugger-programmer-arduino-st-morpho/](https://www.st.com/en/evaluation-tools/nucleo-f410rb.html)
+- [STMicroelectronics NUCLEO-F410RB](https://www.st.com/en/evaluation-tools/nucleo-f410rb.html)
 - [Espressif ESP32-C6-DevKitM-1](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitm-1/user_guide.html)
 
 ## Firmware architecture
