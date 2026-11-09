@@ -234,13 +234,14 @@ Open the STM32 development container and run from the Cargo project directory:
 
 ```sh
 cd stm32-f410-ppp-client
-cargo build --release --locked
-cargo run --release --locked
+cargo rrb stm32-f410-ppp-client # cargo rrb utilizes flip-link
 ```
 
-The `.cargo/config.toml` selects the `thumbv7em-none-eabihf` target and configures `probe-rs run --chip STM32F410RB --speed 100` as the runner. Consequently, `cargo run --release --locked` builds and invokes the configured runner to program and run the firmware on a connected STM32F410RB through a supported probe.
+The `.cargo/config.toml` selects the `thumbv7em-none-eabihf` target and configures `probe-rs run --chip STM32F410RB --speed 100` as the runner. Consequently, `cargo rrb stm32-f410-ppp-client` builds and invokes the configured runner to program and run the firmware on a connected STM32F410RB through a supported probe.
 
 The configured runner and flashing workflow have been used for the successful hardware run. Ensure the debug probe is connected and accessible inside the development container.
+
+Ensure the harware is connected before building and opening the contianer.
 
 ## Hardware validation and test status
 
