@@ -195,10 +195,10 @@ The checked-in client does not configure MQTT username/password authentication o
 | Rust target | `thumbv7em-none-eabihf` | `stm32-f410-ppp-client/.cargo/config.toml` |
 | `embassy-executor` | 0.9.1 | `Cargo.toml` / `Cargo.lock` |
 | `embassy-time` | 0.5.0 requirement; 0.5.1 locked | `Cargo.toml` / `Cargo.lock` |
-| `embassy-stm32` | 0.5.0 | `Cargo.toml` / `Cargo.lock` |
-| `embassy-net` | 0.9.1 | `Cargo.toml` / `Cargo.lock` |
-| `embassy-net-ppp` | 0.3.0 | `Cargo.toml` / `Cargo.lock` |
-| `minimq` | 0.13.5 | `Cargo.toml` / `Cargo.lock` |
+| `embassy-stm32` | 0.5.0 | `Cargo.toml` , `Cargo.lock` |
+| `embassy-net` | 0.9.1 | `Cargo.toml` , `Cargo.lock` |
+| `embassy-net-ppp` | 0.3.0 | `Cargo.toml` , `Cargo.lock` |
+| `minimq` | 0.13.5 | `Cargo.toml` , `Cargo.lock` |
 | STM32 container base | `mcr.microsoft.com/devcontainers/base:ubuntu` (no image tag or digest pin in the Dockerfile) | `stm32-f410-ppp-client/Dockerfile` |
 
 The ESP32 container uses the Espressif IDF image pinned by digest `sha256:151694440c974ab29fad02137dc0fbb4b6c4f9a2586d7c7f1e8ec8288386186d`. The ESP-IDF component lockfile resolves ESP-IDF 5.4.4, `eppp_link` 1.1.6, and `esp_serial_slave_link` 1.1.2.
