@@ -302,7 +302,7 @@ Both firmware applications were built, flashed, and successfully exercised toget
 | MQTT QoS 1 publish diagnostic | Included and exercised in the hardware run | MQTT runtime log or broker-side capture not committed |
 | NAPT/upstream connectivity | Part of the tested gateway configuration | Separate routing/forwarding report not committed |
 
-“Maintainer-confirmed” indicates that the project owner reports completing the test on physical hardware. It does not imply that the raw test logs or a formal test procedure are included in this repository. The absence of a committed log is a documentation gap, not evidence that the test was never performed.
+“Maintainer-confirmed” indicates that the project owner reports completing the test on physical hardware. It does not imply that the raw test logs or a formal test procedure are included in this repository.
 
 ## Limitations and known gaps
 
