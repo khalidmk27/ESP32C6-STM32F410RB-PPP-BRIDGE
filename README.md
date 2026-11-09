@@ -76,7 +76,7 @@ The diagram describes the configured topology and the tested system arrangement;
 
 ## Hardware and serial configuration
 
-The two firmware targets are ESP32-C6 and STM32F410RB. Both sides configure the UART link for 115200 baud. The firmware has been exercised using the physical UART interconnection; the repository does not currently include a dedicated wiring diagram, schematic, board photographs, connector mapping, or a detailed electrical-interface note.
+The two firmware targets are ESP32-C6 and STM32F410RB. Both sides configure the UART link for 115200 baud. The firmware has been exercised using the physical UART interconnection.
 
 | Setting | Configured value | Source |
 |---|---|---|
