@@ -92,6 +92,12 @@ The two firmware targets are ESP32-C6 and STM32F410RB. Both sides configure the 
 The source assigns the STM32 USART1 peripheral pins but does not document the physical wire-to-wire mapping, board connector locations, voltage levels, or flow-control wiring. Consult the board documentation when reproducing the physical connection.
 
 The ESP32 Wi-Fi SSID and password are currently placeholders (`YOUR_WIFI_SSID` and `YOUR_WIFI_PASSWORD`) in the checked-in source. Replace them with local credentials before building for a network test, and do not commit personal Wi-Fi credentials.
+### Hardware Setup
+
+**Development Boards**
+
+- [STMicroelectronics NUCLEO-F410RB]([https://robu.in/product/stmicroelectronics-development-board-stm32f410rb-nucleo-64-mcu-st-link-v2-1-debugger-programmer-arduino-st-morpho/](https://www.st.com/en/evaluation-tools/nucleo-f410rb.html)
+- [Espressif ESP32-C6-DevKitM-1](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitm-1/user_guide.html)
 
 ## Firmware architecture
 
