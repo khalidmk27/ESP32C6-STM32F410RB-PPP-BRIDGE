@@ -25,7 +25,7 @@
     "--query-driver=**",
     "--compile-commands-dir=e:\\Embedded Systems\\ESP32-C6\\PROJECTS\\ESP32C6_EPPP_LINK_UART\\build"
   ],
-  "idf.currentSetup": "/opt/esp/idf",
+  "idf.currentSetup": "C:\\Users\\KHALID\\esp\\v5.4\\esp-idf",
   "idf.customExtraVars": {
     "IDF_TARGET": "esp32c6"
   },
