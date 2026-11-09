@@ -4,7 +4,7 @@ A two-microcontroller firmware project that connects an ESP32-C6 Wi-Fi station t
 
 The ESP32-C6 runs an ESP-IDF application that starts an EPPP PPP server over UART and enables NAPT on the returned PPP network interface. The STM32F410RB runs a `no_std` Rust application built with Embassy. It acts as the PPP client and starts HTTP and MQTT diagnostic tasks after IPv4 network configuration becomes available.
 
-> **Hardware validation:** Both firmware applications have been successfully built in their respective Docker development environments, flashed to their physical development boards, and exercised together on hardware. The repository does not yet include a formal test report or a complete set of runtime logs, photographs, packet captures, or performance measurements.
+> **Hardware validation:** Both firmware applications have been successfully built in their respective Docker development environments, flashed to their physical development boards, and exercised together on hardware. The repository does not yet include a formal test report or a complete set of runtime logs, packet captures, or performance measurements.
 ## Project status
 
 The table distinguishes implementation in the repository from the hardware validation reported by the project maintainer.
