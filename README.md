@@ -99,6 +99,8 @@ The ESP32 Wi-Fi SSID and password are currently placeholders (`YOUR_WIFI_SSID` a
 - [STMicroelectronics NUCLEO-F410RB](https://www.st.com/en/evaluation-tools/nucleo-f410rb.html)
 - [Espressif ESP32-C6-DevKitM-1](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitm-1/user_guide.html)
 
+![Hardware setup](Images/hardware_setup_PPP_image.png)
+
 ## Firmware architecture
 
 ### ESP32-C6 gateway — ESP-IDF
