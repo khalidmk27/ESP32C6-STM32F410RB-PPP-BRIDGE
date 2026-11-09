@@ -276,7 +276,7 @@ Ensure the harware is connected before building and opening the contianer.
 
 ## Hardware validation and test status
 
-The project maintainer confirms that both firmware applications were built, flashed, and successfully exercised together on physical hardware. The status below records that validation while separately identifying the test artifacts that are not yet published in the repository.
+Both firmware applications were built, flashed, and successfully exercised together on physical hardware. The status below records that validation while separately identifying the test artifacts that are not yet published in the repository.
 
 | Test area | Result | Evidence available in repository |
 |---|---|---|
@@ -317,7 +317,6 @@ The project maintainer confirms that both firmware applications were built, flas
 
 These are potential extensions and documentation improvements, not claims about current functionality:
 
-- Add board photographs, a wiring diagram, connector references, and electrical-interface notes.
 - Publish representative ESP32, UART/PPP, STM32, HTTP, and MQTT runtime logs from a successful test run.
 - Add a reproducible validation procedure covering Wi-Fi association, PPP negotiation, IPv4/DNS configuration, and upstream connectivity.
 - Document the IPv4 prefix and gateway configuration rationale.
