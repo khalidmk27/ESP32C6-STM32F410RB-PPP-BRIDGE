@@ -323,6 +323,7 @@ These are potential extensions and documentation improvements, not claims about 
 - Add MQTT subscription and application-level response handling if bidirectional messaging is required.
 - Pin the Rust toolchain and relevant container-installed tool versions for tighter environment reproducibility.
 - Add automated build checks for both firmware applications.
+- Connection recoveries and retries.
 
 ## Source files
 
