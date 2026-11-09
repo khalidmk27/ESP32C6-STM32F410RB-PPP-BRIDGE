@@ -32,17 +32,16 @@ The following diagram represents the source-defined architecture. The integrated
 ```mermaid
 flowchart LR
     STM[STM32F410RB<br/>Rust no_std / Embassy<br/>PPP client]
-    UART[UART serial link<br/>115200 baud]
+    UART[UART serial transport<br/>115200 baud configured]
     ESP[ESP32-C6<br/>ESP-IDF / eppp_link<br/>PPP server]
-    PIF[ESP32 PPP network interface<br/>NAPT enable call]
-    WIFI[ESP32 Wi-Fi station]
-    AP[Wi-Fi access point / upstream network]
+    WIFI[Wi-Fi station interface]
+    NET[Upstream network path<br/>exercised on hardware]
 
     STM <--> UART
     UART <--> ESP
-    ESP --> PIF
-    PIF -. NAPT configured on PPP interface .-> WIFI
-    WIFI <--> AP
+    ESP --> WIFI
+    ESP -. "NAPT enabled on PPP netif" .-> NET
+    WIFI --> NET
 ```
 
 The ESP32-C6 connects to a Wi-Fi network as a station. It then configures `eppp_link` to listen for a PPP connection over UART. The STM32F410RB configures the corresponding PPP client over USART1. On the ESP32, the application calls `esp_netif_napt_enable()` with the PPP network interface returned by `eppp_listen()`.
