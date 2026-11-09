@@ -184,9 +184,7 @@ The checked-in client does not configure MQTT username/password authentication o
 
 ## Software and development environments
 
-The following versions and settings are taken from the checked-in manifests, lockfiles, Dockerfiles, and configuration files. Where applicable, the table distinguishes the manifest requirement from the lockfile-resolved version.
-
-| Component | Version or configuration | Repository evidence |
+| Component | Version or configuration | Repository source |
 |---|---|---|
 | ESP-IDF | 5.4.4 resolved in the ESP component lockfile | `ESP32C6_EPPP_LINK_UART/dependencies.lock` |
 | ESP-IDF container | `espressif/idf:release-v5.4`, pinned by image digest | `ESP32C6_EPPP_LINK_UART/.devcontainer/Dockerfile` |
