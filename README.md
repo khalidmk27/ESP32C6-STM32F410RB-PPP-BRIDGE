@@ -23,6 +23,14 @@ The table distinguishes implementation in the repository from the hardware valid
 | MQTT subscription and application-level reply handling | Not present in the checked-in STM32 smoke-test code | Not implemented |
 | Performance and endurance measurements | No measurement report or benchmark harness is included | Not documented; do not infer from successful functional testing |
 
+## Issue Register
+
+Technical issues encountered during development, debugging, and hardware testing are documented in the Issue Register.
+
+Each entry includes the issue, investigation and implemented solution. Resolved issues from earlier development stages are also documented to preserve troubleshooting experience.
+
+**[View Project Issue Register →](docs/issue-register/)**
+
 ## System architecture
 
 The following diagram represents the source-defined architecture. The integrated firmware has also been exercised on physical hardware, as noted above.
