@@ -298,8 +298,6 @@ Both firmware applications were built, flashed, and successfully exercised toget
 | MQTT QoS 1 publish diagnostic | Included and exercised in the hardware run | MQTT runtime log or broker-side capture not committed |
 | NAPT/upstream connectivity | Part of the tested gateway configuration | Separate routing/forwarding report not committed |
 
-“Maintainer-confirmed” indicates that the project owner reports completing the test on physical hardware. It does not imply that the raw test logs or a formal test procedure are included in this repository.
-
 ## Limitations and known gaps
 
 - The repository does not yet include a formal hardware validation report, complete runtime logs, packet captures, or a repeatable test procedure.
@@ -312,6 +310,7 @@ Both firmware applications were built, flashed, and successfully exercised toget
 - No throughput, latency, power-consumption, memory-utilization, or long-duration stability measurements are included.
 - No dedicated network interruption, PPP renegotiation, or recovery test report is included.
 - Wi-Fi SSID and password are placeholders in the checked-in ESP32 source and must be configured locally.
+- No PPP start synchronization.
 
 ## Possible next steps
 
@@ -327,7 +326,7 @@ These are potential extensions and documentation improvements, not claims about 
 - Pin the Rust toolchain and relevant container-installed tool versions for tighter environment reproducibility.
 - Add automated build checks for both firmware applications.
 - Connection recoveries and retries.
-
+- AT COMMAND interface at ESP32 for PPP start synchronization, IP/Wifi checks.
 ## Source files
 
 ### ESP32-C6
