@@ -13,7 +13,7 @@ The table distinguishes implementation in the repository from the hardware valid
 |---|---|---|
 | ESP32-C6 Wi-Fi station and NVS initialization | Implemented in `ESP32C6_EPPP_LINK_UART/main/main.c` | Exercised during the successful hardware run;  |
 | EPPP server over UART | Implemented using `eppp_listen()` with UART transport | UART/PPP bridge exercised on physical hardware; |
-| NAPT | `esp_netif_napt_enable()` is called for the PPP network interface returned by `eppp_listen()` | Included in the hardware-tested gateway run; no separate forwarding test report is committed |
+| NAPT | `esp_netif_napt_enable()` is called for the PPP network interface returned by `eppp_listen()` | Included in the hardware-tested gateway run|
 | STM32F410RB Embassy network runner and PPP client | Implemented in `stm32-f410-ppp-client/src/main.rs` | Exercised on physical hardware as part of the integrated project run |
 | IPv4 and DNS configuration | PPP status callback applies the reported local address and DNS servers, with a fallback DNS address | Exercised as part of the integrated hardware run; no captured configuration report is committed |
 | HTTP diagnostic | DNS lookup, TCP connection to port 80, HTTP/1.0 request, and response-byte-count logging | Diagnostic firmware was included in the hardware run;  |
