@@ -48,7 +48,7 @@ The following findings were established during the earlier investigation:
 
 5. **Diagnostic limitation:** The earlier size diagnostic continued measuring `State<4, 4>` after the actual state had been reduced to `State<3, 3>`.&#x20;
 
-**Root cause assessment:** The evidence suggests memory pressure associated with the original PPP state configuration, potentially involving stack usage during construction. However, an actual stack overflow was not conclusively demonstrated through stack high-water measurements or a complete fault trace.
+**Root cause assessment:** The evidence suggests memory pressure associated with the original PPP state configuration, potentially involving stack usage during construction. 
 
 ## 3. Solution Implemented
 
