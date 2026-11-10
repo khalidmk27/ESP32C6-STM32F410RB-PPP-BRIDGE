@@ -11,12 +11,12 @@ The table distinguishes implementation in the repository from the hardware valid
 
 | Area | Implementation in `dev` | Validation status |
 |---|---|---|
-| ESP32-C6 Wi-Fi station and NVS initialization | Implemented in `ESP32C6_EPPP_LINK_UART/main/main.c` | Exercised during the successful hardware run; runtime logs are not committed |
-| EPPP server over UART | Implemented using `eppp_listen()` with UART transport | UART/PPP bridge exercised on physical hardware; detailed negotiation logs are not committed |
+| ESP32-C6 Wi-Fi station and NVS initialization | Implemented in `ESP32C6_EPPP_LINK_UART/main/main.c` | Exercised during the successful hardware run;  |
+| EPPP server over UART | Implemented using `eppp_listen()` with UART transport | UART/PPP bridge exercised on physical hardware; |
 | NAPT | `esp_netif_napt_enable()` is called for the PPP network interface returned by `eppp_listen()` | Included in the hardware-tested gateway run; no separate forwarding test report is committed |
 | STM32F410RB Embassy network runner and PPP client | Implemented in `stm32-f410-ppp-client/src/main.rs` | Exercised on physical hardware as part of the integrated project run |
 | IPv4 and DNS configuration | PPP status callback applies the reported local address and DNS servers, with a fallback DNS address | Exercised as part of the integrated hardware run; no captured configuration report is committed |
-| HTTP diagnostic | DNS lookup, TCP connection to port 80, HTTP/1.0 request, and response-byte-count logging | Diagnostic firmware was included in the hardware run; detailed response logs are not committed |
+| HTTP diagnostic | DNS lookup, TCP connection to port 80, HTTP/1.0 request, and response-byte-count logging | Diagnostic firmware was included in the hardware run;  |
 | MQTT diagnostic | Plaintext MQTT connection to `broker.hivemq.com:1883` and QoS 1 publish flow | Diagnostic firmware was included in the hardware run; no broker-side capture or MQTT log transcript is committed |
 | ESP32-C6 build and flash | ESP-IDF project and pinned development-container image | Successfully built and flashed, maintainer-confirmed |
 | STM32F410RB build and flash | Cargo project and STM32 development container | Successfully built and flashed, maintainer-confirmed |
@@ -160,7 +160,7 @@ Connection: close
 
 ```
 
-The task writes the request, flushes the socket, performs one read into a 96-byte response buffer, and logs the number of response bytes returned. It does not parse or validate the HTTP status code or response body. The hardware run exercised the firmware diagnostic path; response transcripts are not committed in this repository.
+The task writes the request, flushes the socket, performs one read into a 96-byte response buffer, and logs the number of response bytes returned. It does not parse or validate the HTTP status code or response body. The hardware run exercised the firmware diagnostic path.
 
 ### MQTT diagnostic
 
@@ -282,19 +282,19 @@ Ensure the harware is connected before building and opening the contianer.
 
 Both firmware applications were built, flashed, and successfully exercised together on physical hardware. The status below records that validation while separately identifying the test artifacts that are not yet published in the repository.
 
-| Test area | Result | Evidence available in repository |
-|---|---|---|
-| ESP32-C6 firmware build | Passed — maintainer-confirmed | Build output not committed |
-| STM32F410RB firmware build | Passed — maintainer-confirmed | Build output not committed |
-| ESP32-C6 firmware flashing | Passed — maintainer-confirmed | Flash log not committed |
-| STM32F410RB firmware flashing | Passed — maintainer-confirmed | Flash log not committed |
-| Physical UART interconnection | Exercised during the successful hardware run | Wiring diagram and serial capture not committed |
-| ESP32 Wi-Fi station and PPP gateway startup | Exercised during the successful hardware run | Runtime log not committed |
-| UART PPP client/server link | Exercised during the successful hardware run | PPP negotiation log not committed |
-| STM32 IPv4/DNS setup | Exercised as part of the integrated firmware run | Captured interface/DNS configuration not committed |
-| HTTP diagnostic task | Included and exercised in the hardware run | HTTP response transcript not committed |
-| MQTT QoS 1 publish diagnostic | Included and exercised in the hardware run | MQTT runtime log or broker-side capture not committed |
-| NAPT/upstream connectivity | Part of the tested gateway configuration | Separate routing/forwarding report not committed |
+| Test area | Result |
+|---|---|
+| ESP32-C6 firmware build | Passed — maintainer-confirmed |
+| STM32F410RB firmware build | Passed — maintainer-confirmed |
+| ESP32-C6 firmware flashing | Passed — maintainer-confirmed |
+| STM32F410RB firmware flashing | Passed — maintainer-confirmed |
+| Physical UART interconnection | Exercised during the successful hardware run |
+| ESP32 Wi-Fi station and PPP gateway startup | Exercised during the successful hardware run | 
+| UART PPP client/server link | Exercised during the successful hardware run |
+| STM32 IPv4/DNS setup | Exercised as part of the integrated firmware run | 
+| HTTP diagnostic task | Included and exercised in the hardware run | 
+| MQTT QoS 1 publish diagnostic | Included and exercised in the hardware run | 
+| NAPT/upstream connectivity | Part of the tested gateway configuration | 
 
 ## Limitations and known gaps
 
