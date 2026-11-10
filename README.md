@@ -29,7 +29,7 @@ Technical issues encountered during development, debugging, and hardware testing
 
 Each entry includes the issue, investigation and implemented solution. Resolved issues from earlier development stages are also documented to preserve troubleshooting experience.
 
-**[View Project Issue Register →](docs/issue-register/)**
+**[View Project Issue Register →](https://github.com/khalidmk27/ESP32C6-STM32F410RB-PPP-BRIDGE/tree/main/docs/issue-register)**
 
 ## System architecture
 
