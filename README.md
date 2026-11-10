@@ -146,8 +146,6 @@ The STM32 PPP status callback performs the following steps:
 - Adds `1.1.1.1` if no DNS server was reported.
 - Applies `ConfigV4::Static` with `gateway: None`.
 
-These are the exact configuration values used by the checked-in source. The repository does not explain the design rationale for prefix length `0` or the absence of an explicit gateway. Successful hardware operation should not be interpreted as a substitute for documenting the address and routing design; this is a useful area for a future design note.
-
 ## Network and application diagnostics
 
 ### HTTP diagnostic
