@@ -73,8 +73,6 @@ The diagram describes the configured topology and the tested system arrangement;
 │   └── hardware_setup_PPP_image.png
 ├── docs/
 │   └── issue-register/
-│       ├── MQTT-CONNECT-Handshake-Failure-(Transport EOF).md
-│       └── STM32-PPP-MEM-001-hardfault-during-ppp-state-initialization.md
 └── stm32-f410-ppp-client/
     ├── Cargo.toml
     ├── Cargo.lock
