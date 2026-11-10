@@ -113,6 +113,20 @@ The ESP32 Wi-Fi SSID and password are currently placeholders (`YOUR_WIFI_SSID` a
 
 ![Hardware setup](Images/hardware_setup_PPP_image.png)
 
+### Physical UART Connections
+
+The ESP32-C6 and STM32F410RB communicate through a crossed UART TX/RX connection.
+
+| ESP32-C6 | STM32F410RB |
+|---|---|
+| GPIO21 (TX) | PA10 (USART1_RX) |
+| GPIO20 (RX) | PA9 (USART1_TX) |
+| GND | GND |
+
+**Important:** UART TX and RX must be cross-connected. Connect TX to RX and RX to TX.
+
+Both devices operate at 115200 baud.
+
 ## Firmware architecture
 
 ### ESP32-C6 gateway — ESP-IDF
