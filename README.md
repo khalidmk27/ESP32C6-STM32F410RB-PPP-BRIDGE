@@ -269,7 +269,7 @@ The `.cargo/config.toml` selects the `thumbv7em-none-eabihf` target and configur
 
 The configured runner and flashing workflow have been used for the successful hardware run. Ensure the debug probe is connected and accessible inside the development container.
 
-Ensure the harware is connected before building and opening the contianer.
+Ensure the USB devices/devboards/debuggers are connected to dev environment before building the container.
 
 **Output Example:**
 
